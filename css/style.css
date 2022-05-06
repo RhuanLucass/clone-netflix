@@ -28,12 +28,18 @@ header{
 }
 
 header .container{
-    height: 70px;
+    height: 5vw;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+    transition: background-color .5s;
+}
+
+header .header-black{
+    background-color: var(--background);
+    
 }
 
 header .logo-nav{
@@ -66,7 +72,7 @@ header .logo-nav nav a{
     font-size: 1.2vw;
     cursor: pointer;
     white-space: nowrap;
-    transition: .4s;
+    transition: color .4s;
 }
 
 header .logo-nav nav a:hover{
@@ -76,12 +82,12 @@ header .logo-nav nav a:hover{
 header .utilities{
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 30px;
+    grid-gap: 2vw;
 }
 
 header .utilities i{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.6vw;
 }
 
 /* MAIN */  
