@@ -122,15 +122,17 @@ main .banner-main img.banner{
 
 main .view{
     width: 40%;
-    margin-top: 10%;
+    margin-top: 18%;
     margin-bottom: 6%;
 
     position: relative;
     z-index: 3;
 }
 
-main .view .title img{
-    width: 100%;
+main .view .title h1{
+    font-size: 3.5vw;
+    text-shadow: 0.1em 0.1em 0.3rem rgba(0, 0, 0, 0.4);
+
 }
 
 main .view .title p{
@@ -186,7 +188,34 @@ main .view .buttons button i{
     margin-bottom: 1vw;
 }
 
+.list-single .carousel,
+.list-single .carousel-films{
+    width: 100%;
+}
+
+.list-single .carousel img,
+.list-single .carousel-films img{
+    margin: .5vw;
+}
+
 .box-film{
     height: 100%;
     width: 100%;
+    max-width: 15vw;
+}
+
+.box-film img{
+    max-width: 100%;
+}
+
+
+/* dots */
+.slick-dots li.slick-active button:before{
+    color: white !important;
+    font-size: 20px;
+}
+
+.slick-dots li button:before{
+    color: white !important;
+    font-size: 20px !important;
 }
