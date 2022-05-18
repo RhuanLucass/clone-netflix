@@ -23,7 +23,6 @@ const getMovies = (url) => {
     .then(data => {
         console.log(data)
         data.results.map((i, j) => {
-            
             if(j == 0){
                 document.querySelector('main .banner-main .banner')
                 .src = IMG_URL + i.backdrop_path;
@@ -31,7 +30,7 @@ const getMovies = (url) => {
                 document.querySelector('main .view .title h1').textContent = i.title;
                 document.querySelector('main .view .title p').textContent = i.overview;
             }
-            else{
+            else if(i.poster_path != null){
                 document.querySelectorAll('.carousel .box-film')[--j].src= CARD_URL + i.poster_path;
             }
                 
@@ -46,7 +45,7 @@ const getMoviesDrama = (url) => {
     .then(data => {
         console.log(data)
         data.results.map((i, j) => {
-            if(j > 0)
+            if(j > 0 && i.poster_path != null)
             document.querySelectorAll('.carousel-films .box-film')[--j].src= CARD_URL + i.poster_path;
         })
     })
