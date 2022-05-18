@@ -12,7 +12,7 @@ const API_KEY = '&api_key=c87020c3d47d92380a22857457e78265';
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc' + API_KEY;
 
-const API_URL_D = BASE_URL + '/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10' + API_KEY;
+const API_URL_D = BASE_URL + '/discover/movie?with_genres=10752&sort_by=vote_average.desc&vote_count.gte=10' + API_KEY;
 
 const IMG_URL = 'https://image.tmdb.org/t/p/original';
 const CARD_URL = 'https://image.tmdb.org/t/p/w500';
