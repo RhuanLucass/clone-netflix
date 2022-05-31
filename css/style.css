@@ -7,17 +7,22 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
     background-color: var(--background);
     color: white;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
 }
 
 .container{
     width: 100%;
-    padding: 20px 4%;
+    padding: 1.5% 4%;
 }
 
 /* HEADER */
@@ -28,7 +33,6 @@ header{
 }
 
 header .container{
-    height: 5vw;
     position: fixed;
     display: flex;
     align-items: center;
@@ -51,6 +55,7 @@ header .logo-nav{
 
 header .logo-nav .logo{
     width: 15%;
+    min-width: 80px;
 }
 
 header .logo-nav .logo img{
@@ -63,13 +68,13 @@ header .logo-nav nav{
     margin-left: 7%;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1.5vw;
-    /* width: 100%; */
+    grid-gap: 7%;
 }
 
-header .logo-nav nav a{
+header .logo-nav nav a,
+header .logo-nav p{
     color: white;
-    font-size: 1.2vw;
+    font-size: .9rem;
     cursor: pointer;
     white-space: nowrap;
     transition: color .4s;
@@ -79,15 +84,85 @@ header .logo-nav nav a:hover{
     color: rgb(190, 190, 190);
 }
 
+header .logo-nav .tablet i{
+    font-size: .7rem;
+    padding-left: 5px;
+}
+
+header .logo-nav .tablet{
+    display: none;
+    justify-content: center;
+    
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+header .logo-nav .tablet .menu{
+    display: none;
+    background-color: black;
+    padding: 2% 8%;
+    text-align: center;
+    border-top: 3px solid white;
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    margin: 0;
+}
+
+header .logo-nav .tablet .menu a{
+    display: block;
+    padding: 20% 0;
+}
+
+.display-iblock{
+    display: inline-block !important;
+}
+
+
 header .utilities{
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 2vw;
+    grid-gap: 25px;
+    align-items: center;
 }
 
 header .utilities i{
     cursor: pointer;
-    font-size: 1.6vw;
+    font-size: 1.2rem;
+}
+
+header .utilities form{
+    display: flex;
+    align-items: center;
+}
+
+header .utilities input[type=search]{
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    padding: 1%;
+    padding-left: 13%;
+    margin: 0;
+    max-width: 250px;
+    width: 100%;
+    display: none;
+    transition: 1s;
+}
+
+.position{
+    position: relative;
+    left: 12%;
+    transition: 1s;
 }
 
 /* MAIN */  
@@ -130,14 +205,14 @@ main .view{
 }
 
 main .view .title h1{
-    font-size: 3.5vw;
+    font-size: 2.5rem;
     text-shadow: 0.1em 0.1em 0.3rem rgba(0, 0, 0, 0.4);
 
 }
 
 main .view .title p{
-    padding: 1vw 0;
-    font-size: 1.3vw;
+    padding: 3% 0;
+    font-size: 1rem;
     text-shadow: 0.1em 0.1em 0.3rem black;
 }
 
@@ -148,7 +223,7 @@ main .view .buttons{
 main .view .buttons button{
     padding: 2% 5%;
     border-radius: 4px;
-    font-size: 1.2vw;
+    font-size: .9rem;
     font-weight: bold;
     cursor: pointer;
     border: 0;
@@ -169,8 +244,8 @@ main .view .buttons button:hover{
 }
 
 main .view .buttons button i{
-    padding-right: 0.6vw;
-    font-size: 1.5vw;
+    padding-right: 6px;
+    font-size: 1.3rem;
 }
 
 /* LIST */
@@ -184,8 +259,8 @@ main .view .buttons button i{
 }
 
 .list-wrapper .list-single h3{
-    font-size: 1.3vw;
-    margin-bottom: 1vw;
+    font-size: 1rem;
+    margin-bottom: 1.5%;
 }
 
 .list-single .carousel,
@@ -195,13 +270,13 @@ main .view .buttons button i{
 
 .list-single .carousel img,
 .list-single .carousel-films img{
-    margin: .5vw;
+    margin: .3%;
+    cursor: pointer;
 }
 
 .box-film{
     height: 100%;
     width: 100%;
-    max-width: 15vw;
 }
 
 
@@ -209,10 +284,80 @@ main .view .buttons button i{
 /* dots */
 .slick-dots li.slick-active button:before{
     color: white !important;
-    font-size: 1vw;
+    font-size: .5rem !important;
 }
 
 .slick-dots li button:before{
     color: white !important;
-    font-size: 1vw !important;
+    font-size: .4rem !important;
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 1024px){
+    main .view{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 885px){    
+    /* HEADER */
+
+    header .logo-nav .desktop{
+        display: none;
+    }
+    
+    header .logo-nav .tablet{
+        display: flex;
+    }
+    
+    /* MAIN */  
+    
+    main .view{
+        width: 60%;
+        margin-top: 7%;
+    }
+    
+    main .view .title h1{
+        width: 80%;
+        font-size: 2rem;
+    }
+    
+    main .view .title p{
+        font-size: .9rem;
+    }
+    
+    main .view .buttons button{
+        padding: 2% 3%;
+        font-size: .8rem;
+    }
+    
+    main .view .buttons button i{
+        padding-right: 3px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px){ 
+    header .utilities{
+        grid-gap: 15px;
+    }
+
+    header .utilities i{
+        font-size: 1rem;
+    }
+
+    /* MAIN */
+    
+    main .banner-main .banner{
+        display: none;
+    }
+    
+    main .view{
+        display: none;
+    }
+
+    main  .list-wrapper{
+        padding-top: 10%;
+    }
 }

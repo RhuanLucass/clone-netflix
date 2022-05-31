@@ -31,7 +31,8 @@ const getMovies = (url) => {
                 document.querySelector('main .view .title p').textContent = i.overview;
             }
             else if(i.poster_path != null){
-                document.querySelectorAll('.carousel .box-film')[--j].src= CARD_URL + i.poster_path;
+                document.querySelectorAll('.carousel .box-film')[--j]
+                .src= CARD_URL + i.poster_path;
             }
                 
         })
