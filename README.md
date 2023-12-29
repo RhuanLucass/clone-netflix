@@ -1,33 +1,32 @@
-# Recriação da Página Inicial da Netflix
+# Netflix Homepage Recreation
 
-Este projeto consiste na recriação da tela inicial da Netflix, focalizando principalmente a utilização da API do The Movie DB para obter informações sobre filmes e a implementação de um carrossel de filmes usando a biblioteca Slick.
+This project entails recreating Netflix's homepage, focusing primarily on utilizing The Movie DB API to fetch movie information and implementing a movie carousel using the Slick library.
 
-## Objetivos Principais
+## Main Objectives
 
-- Utilização da API do The Movie DB para obtenção dinâmica da lista de filmes.
-- Implementação de um carrossel de filmes para exibição na tela inicial.
-- Desenvolvimento de uma página responsiva, adaptável a diferentes dispositivos.
+- Using The Movie DB API to dynamically fetch the movie list.
+- Implementing a movie carousel for display on the homepage.
+- Developing a responsive page adaptable to different devices.
 
 ## Project Preview
 
 ![Preview](https://github.com/RhuanLucass/clone-netflix/blob/master/assets/netflix.png)
 
-## Detalhes do Projeto
+## Project Details
 
-- A página inicial exibe um carrossel dinâmico de filmes, atualizado regularmente com os dados fornecidos pela API.
-- A API utilizada atualiza a lista de filmes e destaque principal todos os dias.
-- O projeto foi focado principalmente na integração e utilização da API, bem como na funcionalidade do carrossel, mantendo uma estrutura simples.
+- The homepage features a dynamic movie carousel, regularly updated with data from the API.
+- The API used updates the list of movies and the main highlight every day.
+- The project mainly focused on API integration and usage, along with carousel functionality, maintaining a simple structure.
 
-## How to use
+## How to Use
 
-- Access the page link on github: [Netflix](https://rhuanlucass.github.io/clone-netflix/)
+- Access the page link on GitHub: [Netflix](https://rhuanlucass.github.io/clone-netflix/)
 
 or
 
 1. Clone this repository.
 2. Open the `index.html` file in your browser to view the page.
 
-Devido à simplicidade do projeto, as chaves de acesso à API estão incorporadas diretamente no código.
+Due to the project's simplicity, the API access keys are embedded directly in the code.
 
-Sinta-se à vontade para explorar e testar a recriação da página inicial da Netflix e o carrossel de filmes implementado!
-
+Feel free to explore and test the recreated Netflix homepage and the implemented movie carousel!
